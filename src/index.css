@@ -1,4 +1,5 @@
 #root{
-
+ overflow-y: scroll;
+ scrollbar-width: none;
   height: 100vh;
 }

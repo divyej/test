@@ -72,13 +72,14 @@ const OptionChainTable = () => {
     <Stack
       sx={{
         height: "100%",
-      
+        overflow:"scroll",
+        scrollbarWidth:"none",
         padding:2
       }}
     >
       <TableContainer
         component={Paper}
-        style={{ boxShadow: "none", borderRadius: 30 }}
+        style={{ boxShadow: "none", borderRadius: 30 ,overflowY:"scroll",scrollbarWidth:"none"}}
       >
         <Table style={{ borderCollapse: "collapse" }}>
           <TableHeader sortConfig={sortConfig} onSort={sortData} />
