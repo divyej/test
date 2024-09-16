@@ -1,33 +1,39 @@
 import React from "react";
 import { TableCell, TableRow } from "@mui/material";
-import { headers as TABLE_HEADERS, mapping } from "../utils/datasets/TableFields";
+import {
+  headers as TABLE_HEADERS,
+  mapping,
+} from "../utils/datasets/TableFields";
 import { COLORS } from "../utils/datasets/colors";
-
 
 const TableHeader = ({ onSort }) => (
   <>
     <TableRow>
       <TableCell
         colSpan={5}
-        align="center"
+        align="right"
         style={{
           backgroundColor: COLORS.callBackground,
           border: COLORS.border,
+          fontSize: "1.2rem",
+          textTransform: "none",
         }}
       >
         CALLS
       </TableCell>
       <TableCell
-        rowSpan={2}
         align="center"
         style={{ backgroundColor: "#eeeeee", border: COLORS.border }}
-      >
-        STRIKE
-      </TableCell>
+      />
+
       <TableCell
         colSpan={5}
-        align="center"
-        style={{ backgroundColor: COLORS.putBackground, border: COLORS.border }}
+        style={{
+          backgroundColor: COLORS.putBackground,
+          border: COLORS.border,
+          fontSize: "1.2rem",
+          textTransform: "none",
+        }}
       >
         PUTS
       </TableCell>
@@ -38,37 +44,39 @@ const TableHeader = ({ onSort }) => (
           key={index}
           sx={{
             border: COLORS.border,
-            cursor: 'pointer',
-       
-          
+            cursor: "pointer",
           }}
           style={{
-            justifyContent: 'space-between',
-            alignItems: 'center',
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
           onClick={() => onSort(header)}
         >
           <span>{header}</span>
-       
         </TableCell>
       ))}
+      <TableCell
+        align="center"
+        style={{ backgroundColor: "#eeeeee", border: COLORS.border }}
+      >
+        Strike Price
+      </TableCell>
+
       {TABLE_HEADERS.puts.map((header, index) => (
         <TableCell
           key={index}
           sx={{
             border: COLORS.border,
-            cursor: 'pointer',
+            cursor: "pointer",
           }}
           style={{
-            display: header === 'Put OI (Lakh)' ? 'flex' : 'table-cell',
-            justifyContent: 'space-between',
-            alignItems: 'center',
+            display: header === "Put OI (Lakh)" ? "flex" : "table-cell",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
-       
           onClick={() => onSort(header)}
         >
           <span>{header}</span>
-        
         </TableCell>
       ))}
     </TableRow>

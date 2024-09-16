@@ -9,9 +9,9 @@ export const mapping= {
   'Gamma': 'gamma',
   'Vega': 'vega',
   'Theta': 'theta',
-  'Call Delta': 'callDelta',
+  'Call Delta': 'Delta',
   'Call OI (Lakh)': 'callOI',
-  'Put Delta': 'putDelta',
+  'Put Delta': 'Delta',
   'Put OI (Lakh)': 'putOI',
   'Strike': 'strike',
 };

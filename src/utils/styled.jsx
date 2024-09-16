@@ -4,8 +4,8 @@ import { styled } from "@mui/system";
 
 
 export const CallProgressBar = styled(Box)(({ theme, width }) => ({
-  height: "20px",
-  borderRadius: "8px 0px 0px 8px",  
+  height: "30px",
+  borderRadius: "12px 0px 0px 12px",  
   backgroundColor: "#ffccbc", 
   position: "absolute",
   top: "50%",
@@ -15,8 +15,8 @@ export const CallProgressBar = styled(Box)(({ theme, width }) => ({
 }));
 
 export const PutProgressBar = styled(Box)(({ theme, width }) => ({
-  height: 20,
-  borderRadius: "0px 8px 8px 0px",  
+  height: 30,
+  borderRadius: "0px 12px 12px 0px",  
   backgroundColor: "#c8e6c9",
   position: "absolute",
   top: "50%",

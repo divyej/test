@@ -1,5 +1,5 @@
 export const COLORS = {
-    callBackground: '#e3f2fd',
-    putBackground: '#ffebee',
+    callBackground: '#ffccbb',
+    putBackground: '#c8e6c8',
     border: '1px solid #b0bec5'
   };

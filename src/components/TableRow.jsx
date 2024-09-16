@@ -19,7 +19,7 @@ const TableRowComponent = ({ row, index, hoverRow, setHoverRow }) => (
       <TableCell
         key={idx}
         width={key === 'callOI' ? 300 : undefined}
-        align="center"
+        align={key === 'callOI' ? "center" : undefined}
         style={{ backgroundColor: getColorForCall(row.strike), border: '1px solid #b0bec5', position: 'relative' }}
       >
         {key === 'callOI' ? (
@@ -41,12 +41,12 @@ const TableRowComponent = ({ row, index, hoverRow, setHoverRow }) => (
         )}
       </TableCell>
     ))}
-    <TableCell style={{ backgroundColor: '#eeeeee', border: '1px solid #b0bec5' }}>{row.strike}</TableCell>
+    <TableCell align='center' style={{ backgroundColor: '#eeeeee', border: '1px solid #b0bec5' }}>{row.strike}</TableCell>
     {['putOI', 'putDelta', 'theta', 'vega', 'gamma'].map((key, idx) => (
       <TableCell
         key={idx}
         width={key === 'putOI' ? 300 : undefined}
-        align="center"
+        align={key === 'putOI' ? "center" : undefined}
         style={{ backgroundColor: getColorForPut(row.strike), border: '1px solid #b0bec5', position: 'relative' }}
       >
         {key === 'putOI' ? (
