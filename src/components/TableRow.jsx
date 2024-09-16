@@ -41,7 +41,7 @@ const TableRowComponent = ({ row, index, hoverRow, setHoverRow }) => (
         )}
       </TableCell>
     ))}
-    <TableCell align='center' style={{ backgroundColor: '#eeeeee', border: '1px solid #b0bec5' }}>{row.strike}</TableCell>
+    <TableCell align='center' style={{ border: '1px solid #b0bec5' }}>{row.strike}</TableCell>
     {['putOI', 'putDelta', 'theta', 'vega', 'gamma'].map((key, idx) => (
       <TableCell
         key={idx}
