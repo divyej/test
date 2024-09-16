@@ -77,9 +77,10 @@ const TableHeader = ({ onSort }) => (
           </Stack>
         </TableCell>
       ))}
-      <TableCell align="center" sx={{ border: COLORS.border }}>
+      <TableCell align="center" sx={{ border: COLORS.border,width:"200px" }} 
+     >
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"center"}>
         Strike Price
-        <Stack direction={"row"} alignItems={"center"}>
         <Tooltip title="Info about Strike Price">
           <IconButton size="small">
             <HelpOutlineIcon fontSize="small" />
